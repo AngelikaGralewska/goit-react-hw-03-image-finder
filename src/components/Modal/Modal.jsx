@@ -1,6 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import PropTypes from 'prop-types';
 
 const customStyles = {
   content: {
@@ -31,6 +32,7 @@ const customStyles = {
   );
 };
 
+ReactDOM.render(<App />, appElement);
 
 ModalContainer.propTypes = {
   selectedImage: PropTypes.string.isRequired,
