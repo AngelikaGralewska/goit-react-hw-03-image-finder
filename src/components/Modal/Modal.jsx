@@ -32,7 +32,7 @@ const customStyles = {
   );
 };
 
-ReactDOM.render(<App />, appElement);
+///ReactDOM.render(<App />, appElement);
 
 ModalContainer.propTypes = {
   selectedImage: PropTypes.string.isRequired,
