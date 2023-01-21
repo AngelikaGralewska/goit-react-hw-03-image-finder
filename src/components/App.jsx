@@ -45,9 +45,7 @@ export class App extends Component {
         toast.error('Something went wrong...');
       } finally {
         this.setState({ loading: false });
-      }
-    }
-  }
+      }}}
 
   handleSubmit = query => {
     this.setState({
