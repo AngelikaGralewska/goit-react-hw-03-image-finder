@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
 
@@ -27,7 +26,7 @@ const customStyles = {
       shouldCloseOnEsc={selectedImage !== null}
       onRequestClose={closeImage}
     >
-      <img src={selectedImage} alt="Large image" width="700px" />
+      <img src={selectedImage} alt="Large size" width="700px" />
     </Modal>
   );
 };
