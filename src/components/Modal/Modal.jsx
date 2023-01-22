@@ -32,8 +32,6 @@ const customStyles = {
   );
 };
 
-///ReactDOM.render(<App />, appElement);
-
 ModalContainer.propTypes = {
   selectedImage: PropTypes.string.isRequired,
   closeImage: PropTypes.func.isRequired,
