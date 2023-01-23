@@ -18,7 +18,7 @@ export class App extends Component {
     hits: [],
     page: 1,
     loading: false,
-    totalHits: 0,
+    totalHits: "",
     selectedImage: null,
     shouModal: false,
   };
@@ -78,11 +78,14 @@ export class App extends Component {
           {hits.length > 0 && (
             <ImageGallery selectImage={this.selectImage} hits={hits} />
           )}
-          {Boolean(totalHits) && totalHits !== hits.length && (
+          {totalHits && totalHits !== hits.length && (
             <Button loadMore={this.loadMoreImage} />
           )}
-          {selectedImage !== null && (
-            <ModalContainer selectedImage={selectedImage} closeImage={this.closeImage}/>
+          {selectedImage && (
+          <ModalContainer
+            selectedImage={selectedImage}
+            closeImage={this.closeImage}
+          />
           )}
           <ToastContainer autoClose={2000} />
         </div>

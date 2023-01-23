@@ -4,10 +4,14 @@ import style from './Searchbar.module.css'
 
 
 export const Searchbar = ({ handleSubmit }) => {
-  const onSubmit = event => {
+    const onSubmit = event => {
     event.preventDefault();
+
     const query = event.target.elements.query.value.trim();
-    if (!query) return;
+
+    if (!query) 
+    return;
+
     handleSubmit(query);
     event.target.reset();
   };
@@ -21,7 +25,6 @@ export const Searchbar = ({ handleSubmit }) => {
             autoComplete="off"
             name="query"
             placeholder="Search images and photos"
-            //value = {this.state.query}
           />
           <button type="submit" className={style.searchFormButton}>
             search

@@ -22,6 +22,14 @@ return(
 );};
 
 ImageGallery.propTypes = {
-      hits: PropTypes.array.isRequired,
+      hits: PropTypes.arrayOf(
+        PropTypes.shape({
+          tags: PropTypes.string,
+          id: PropTypes.number.isRequired,
+          webformatURL: PropTypes.string.isRequired,
+          largeImageURL: PropTypes.string.isRequired,
+
+        })
+      ),
       selectImage: PropTypes.func.isRequired,
   };
